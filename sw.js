@@ -1,4 +1,4 @@
-const CACHE = 'svm-ipat-v080';
+const CACHE = 'svm-ipat-v081';
 const FILES = ['./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install', event => {
  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES.map(url=>new Request(url,{cache:'reload'})))).then(()=>self.skipWaiting()));
